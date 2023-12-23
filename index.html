@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>HOME</title>
+</head>
+<style>
+    body{
+        background-image: url("./img/new4.png");
+        background-repeat: no-repeat;
+        height:100%;
+        background-size: cover;
+    }
+    .navbar-menu{
+        font-size: 25px;
+        font-weight: bold;
+        margin-left: 10px;
+        cursor: pointer; 
+        position: relative;
+        left: 700px;
+        top: 0px;
+    }
+    .navbar-menu a{
+        text-decoration: none;
+        color: white;
+        margin-left:7%;
+        font-family:sans-serif;
+    }
+    .navbar-menu a::before{
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color:white; 
+      transition: width 0.3s linear; 
+    }
+    .navbar-menu a:hover::before{
+      width: 100%;
+      margin-left:30%;
+    }
+    .image{
+        background-image: url("./img/bg.jpg");
+        border: 10px double rgb(246, 242, 242);
+        border-radius: 50%;
+        width:250px;
+        height:250px;
+        background-repeat:no-repeat;
+        margin-top: 10%;
+        background-size:cover;
+        margin-left:30%;
+        margin-top:3%;
+        box-shadow: 10px 10px 10px rgba(0,0,0, 0.7);
+    }
+    .img2,.hd{
+        background-image: url("./img/bg3.jpg");
+        border: 10px double rgb(248, 242, 242);
+        width:250px;
+        height:250px;
+        background-repeat:no-repeat;
+        margin-top:10%;
+        background-size:cover;
+        margin-left:30%;
+        margin-top:3%;
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.7);
+        
+    }
+</style>
+<body>
+    <span class="navbar-menu"><a href="./pages/login.html">Login</a></span>
+    <span class="navbar-menu"><a href="./pages/profile.html">Profile</a></span>
+    <span class="navbar-menu"><a href="./pages/cart.html">Cart</a></span>
+    <span class="navbar-menu"><a href="./pages/products.html">Product</a></span><br>
+    <div class="image"></div>
+    <div class="img2"></div>
+</body>
+</html>

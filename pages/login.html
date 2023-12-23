@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<title>LOGIN</title>
+
+<head>
+  <style>
+    * {
+      box-sizing: border-box;
+      padding: 0%;
+      margin: 0;
+    }
+
+    html {
+      height: 100%;
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      border: 20px solid rgb(2, 3, 50);
+    }
+
+    h1 {
+      color: white;
+      font-size: 30px;
+      text-align: center;
+    }
+
+    p {
+      font-size: 25px;
+    }
+
+    .box {
+      color: rgb(20, 73, 188);
+      font-weight: bold;
+      font-size: x-large;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 500px;
+      height: 500px;
+      padding: 20px;
+      display: flex;
+      box-shadow: 10px 10px 10px 0 rgba(7, 7, 7, 0.7);
+      border-left: 8px solid rgb(50, 5, 252);
+      border-right: 8px solid rgb(9, 1, 71);
+      border-top-left-radius: 20%;
+      border-bottom-right-radius: 20%;
+    }
+
+    .col {
+      margin-left: 5%;
+      width: 400px;
+      height: 450px;
+    }
+
+    input {
+      margin-top: 4%;
+      padding: 10px 100px;
+      text-align: left;
+      border: 0;
+      border-bottom: 5px solid rgb(49, 84, 224);
+      background: transparent;
+      color: black;
+    }
+
+    label {
+      margin-left: 5%;
+    }
+
+    .btn,.btn a{
+      font-size: large;
+      background-color: rgb(6, 30, 164);
+      padding: 0px 60px;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <div class="col">
+      <h2 style="text-align:center;margin-top:10%;">LOGIN FORM</h2><br>
+      <form id="registrationForm" action="#" method="post">
+        <label for="email">E-mail:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+        <input type="email" id="email" name="email">
+        <br><br>
+        <label for="password">Password:&nbsp;&nbsp;</label>
+        <input type="password" id="password" name="password">
+        <br><br>
+        <button  style="margin-left:14%;" class="btn" onclick="call()"><a href="./../index.html">LOGIN</a></button>
+    </div>
+  </div>
+</body>
+<script>
+  function call(){
+  const emailInput = document.getElementById("email");
+  const passwordInput = document.getElementById("password");
+    if (!validateEmail()) {
+      event.preventDefault();
+    }
+    else if (!validatePassword()) {
+      event.preventDefault();
+    }
+    else {
+     alert("login sucessfully");
+
+    }
+  function validateEmail() {
+    const email = emailInput.value;
+    if (!/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/.test(email)) {
+      alert("Invalid email address. Please use a valid email format (e.g., name@domain.com).");
+      return false;
+    }
+    return true;
+  }
+  function validatePassword() {
+    const password = passwordInput.value;
+    if (password.length < 6) {
+      alert("Password should be at least 6 characters long.");
+      return false;
+    }
+    return true;
+  }}
+</script>
+
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="html" href="products.html">
+</head>
+<style>
+    * {
+        margin: 0%;
+        padding: 0%;
+    }
+    body {
+        align-items: center;
+        font-family: Arial, sans-serif;
+
+    }
+    h1 {
+        text-align: center;
+        background-color: #6495ED;
+    }
+    h1 a {
+        position: relative;
+        right: 40%;
+    }
+    .section {
+        margin-top: 20px;
+        padding: 20px;
+        margin-left: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 900px;
+        height: 300px;
+    }
+    .box {
+        margin-top: 20px;
+        padding: 10px 100px;
+        padding-left: 35%;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-left: 10%;
+        height: 300px;
+        width: 270px;
+        background-color: #77A1EE;
+    }
+    .btn{
+        font-size: x-large;
+        margin-top:10%;
+    }
+    .con {
+        display: flex;
+    }
+    input {
+        padding: 5px 20px;
+    }
+    td {
+        margin: 10%;
+        padding: 0px 20px;
+    }
+    .mySlides {
+        display: none;
+        padding-left:4%;
+    }
+</style>
+<body>
+    <h1><a href="./../index.html"><img src="../img/la.png"></a>
+        YOUR CART</h1>
+    <h2 style="text-align: center">Fashion is like eating, you shouldn't stick to the same menu.</h2>
+    <div class="con">
+        <div>
+            <div class="section" id="cart" style="height:400px;display:flex;">
+                <div>
+                    <div class="mySlides">
+                        <img src="https://source.unsplash.com/400x400/weekly?model">
+                    </div>
+                    <div class="mySlides">
+                        <img src="https://source.unsplash.com/400x400/weekly?fashion">
+                    </div>
+                    <div class="mySlides">
+                        <img src="https://source.unsplash.com/400x400/weekly?shoes">
+                    </div>
+                </div>&emsp;&emsp;&emsp;&emsp;
+                <div>
+                    <div class="mySlides2">
+                        <img src="https://source.unsplash.com/400x400/weekly?bag">
+                    </div>
+                    <div class="mySlides2">
+                        <img src="https://source.unsplash.com/400x400/weekly?heels">
+                    </div>
+                    <div class="mySlides2">
+                        <img src="https://source.unsplash.com/400x400/weekly?caps">
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <table>
+                    <tr>
+                        <td>
+                            <img src="https://source.unsplash.com/260x260/weekly?bag">
+                            <button onclick="fun('a')">Place Order</button>
+                        </td>
+                        <td>
+                            <img src="https://source.unsplash.com/260x260/weekly?necklace">
+                            <button onclick="fun('b')">Place Order</button>
+                        </td>
+                        <td>
+                            <img src="https://source.unsplash.com/260x260/weekly?skirt">
+                            <button onclick="fun('c')">Place Order</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="section">
+                <table>
+                    <tr>
+                        <td>
+                            <img src="https://source.unsplash.com/260x260/weekly?dress">
+                            <button onclick="fun('d')">Place Order</button>
+                        </td>
+                        <td>
+                            <img src="https://source.unsplash.com/260x260/weekly?pants">
+                            <button onclick="fun('e')">Place Order</button>
+                        </td>
+                        <td>
+                            <img src="https://source.unsplash.com/260x260/weekly?heels">
+                            <button onclick="fun('f')">Place Order</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="section">
+                <table>
+                    <tr>
+                        <td>
+                            <img src="https://source.unsplash.com/260x260/weekly?shirt">
+                            <button onclick="fun('g')">Place Order</button>
+                        </td>
+                        <td>
+                            <img src="https://source.unsplash.com/260x260/weekly?coat">
+                            <button onclick="fun('h')">Place Order</button>
+                        </td>
+                        <td>
+                            <img src="https://source.unsplash.com/260x260/weekly?shoes">
+                            <button onclick="fun('i')">Place Order</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div>
+            <div class="box">
+                <img id="pic" src="https://source.unsplash.com/260x260/weekly?shoppingbag">
+                <h2 id="pr" style="padding-left: 24%;"></h2>
+            </div>
+            <div class="box" style="display:none;" id="frm">
+                <form id="registrationForm" action="#" method="post">
+                    <label for="firstName">Name:<br></label>
+                    <input type="text" id="firstName" name="firstName"><br>
+                    <label for="address">Address: <br></label>
+                    <textarea id="address" name="address"></textarea><br>
+                    <label for="email">E-mail:<br></label>
+                    <input type="email" id="email" name="email"><br>
+                    <label for="mobile">Phone No.:&nbsp;</label>
+                    <input type="text" id="mobile" name="mobile"><br>
+                    <input type="submit" value="Buy Now" style="margin-left:20%;" class="btn">
+            </div>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>
